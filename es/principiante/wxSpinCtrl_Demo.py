@@ -17,9 +17,9 @@ class MiAplicacion(wx.Frame):
 		self.spin2 = wx.SpinCtrl(self, -1, min=1, max=10, size=(-1,20))
 		self.spin3 = wx.SpinCtrl(self, -1, min=-5, max=5, size=(-1,20))
 		# Agregando al sizer
-		self.sz.Add(self.spin1, 0, wx.ALIGN_CENTRE|wx.ALL, 10)
-		self.sz.Add(self.spin2, 0, wx.ALIGN_CENTRE|wx.ALL, 10)
-		self.sz.Add(self.spin3, 0, wx.ALIGN_CENTRE|wx.ALL, 10)
+		self.sz.Add(self.spin1, 0, wx.ALIGN_CENTRE|wx.ALL, 5)
+		self.sz.Add(self.spin2, 0, wx.ALIGN_CENTRE|wx.ALL, 5)
+		self.sz.Add(self.spin3, 0, wx.ALIGN_CENTRE|wx.ALL, 5)
 		# Configurar sizer
 		self.SetSizer(self.sz)
 		# Centrar y mostra el Frame

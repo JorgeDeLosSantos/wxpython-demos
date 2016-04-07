@@ -17,9 +17,9 @@ class MiAplicacion(wx.Frame):
 		self.spin2 = wx.SpinCtrl(self, -1, min=0, max=100, size=(-1,20))
 		self.txt = wx.TextCtrl(self, -1, size=(-1,20), style=wx.TE_CENTRE)
 		# Agregando al sizer
-		self.sz.Add(self.spin1, 0, wx.ALIGN_CENTRE|wx.ALL, 10)
-		self.sz.Add(self.spin2, 0, wx.ALIGN_CENTRE|wx.ALL, 10)
-		self.sz.Add(self.txt, 0, wx.ALIGN_CENTRE|wx.ALL, 10)
+		self.sz.Add(self.spin1, 0, wx.ALIGN_CENTRE|wx.ALL, 5)
+		self.sz.Add(self.spin2, 0, wx.ALIGN_CENTRE|wx.ALL, 5)
+		self.sz.Add(self.txt, 0, wx.ALIGN_CENTRE|wx.ALL, 5)
 		# Agregando evento
 		self.Bind(wx.EVT_SPINCTRL, self.OnChange)
 		# Configurar sizer
