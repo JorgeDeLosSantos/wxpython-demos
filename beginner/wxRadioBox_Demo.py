@@ -8,14 +8,15 @@
 #
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(200,100))
         self.panel = wx.Panel(self, -1)
         self.sz = wx.BoxSizer(wx.VERTICAL)
         
-        lista = ["Azul","Verde","Rojo"]
-        self.rbox = wx.RadioBox(self.panel, label = 'Colores', choices = lista,
+        lang_list = ["Blue","Green","Red"]
+        self.rbox = wx.RadioBox(self.panel, label = 'Colors', 
+                                choices = lang_list, 
                                 style=wx.RA_HORIZONTAL)
         
         self.Bind(wx.EVT_RADIOBOX, self.OnSelect, self.rbox)
@@ -23,7 +24,7 @@ class MiAplicacion(wx.Frame):
         self.sz.Add(self.rbox, 1, wx.EXPAND|wx.ALL, 10)
         
         self.panel.SetSizer(self.sz)
-        # Centrando la ventana
+        # Center window
         self.Centre(True)
         self.Show()
         
@@ -31,5 +32,5 @@ class MiAplicacion(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxRadioBox Demo")
+    frame = WXDemoFrame(None, u"wxRadioBox Demo")
     app.MainLoop()

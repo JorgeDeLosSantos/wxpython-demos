@@ -9,22 +9,22 @@
 
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(250,200))
         self.sz = wx.BoxSizer(wx.VERTICAL)
         
-        # Botón normal
-        self.button = wx.Button(self, -1, u"Botón")
-        # Modificando fuente del botón
+        # Standard Button
+        self.button = wx.Button(self, -1, u"Button")
+        # Updating font button
         self.font1 = self.button.GetFont()
         self.font1.SetPointSize(14)
         self.button.SetFont(self.font1)
-        # Botón con ícono
-        self.bitbutton = wx.Button(self, -1, u"Botón con ícono")
+        # Button with icon
+        self.bitbutton = wx.Button(self, -1, u"Button with icon")
         self.bitbutton.SetBitmap(wx.Bitmap("img/ic_button_01.png"))
-        # Botón plano
-        self.flatbutton = wx.Button(self, -1, u"Botón plano", 
+        # Flat button
+        self.flatbutton = wx.Button(self, -1, u"Flat button", 
                                     style=wx.BORDER_NONE)
         
         self.sz.Add(self.button, 1, wx.EXPAND|wx.ALL, 5)
@@ -37,5 +37,5 @@ class MiAplicacion(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxButton Demo")
+    frame = WXDemoFrame(None, u"wxButton Demo")
     app.MainLoop()

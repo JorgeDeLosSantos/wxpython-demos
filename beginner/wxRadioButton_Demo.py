@@ -8,7 +8,7 @@
 #
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(200,200))
         self.sz = wx.BoxSizer(wx.VERTICAL)
@@ -24,11 +24,11 @@ class MiAplicacion(wx.Frame):
         self.sz.Add(self.rb4, 1, wx.EXPAND|wx.ALL, 10)
         
         self.SetSizer(self.sz)
-        # Centrando la ventana
+        # Center and show
         self.Centre(True)
         self.Show()
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxFrame Demo")
+    frame = WXDemoFrame(None, u"wxFrame Demo")
     app.MainLoop()

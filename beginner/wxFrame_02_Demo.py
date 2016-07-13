@@ -8,20 +8,20 @@
 #
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
-        # Modificando el estilo del Framen (No redimensionable)
+        # Not resizable frame 
         _styles = (wx.CLOSE_BOX|wx.CAPTION)
         wx.Frame.__init__(self,parent,title=title,size=(300,200), 
                           style=_styles)
-        # Configurando el color de fondo
+        # Setting background color
         self.SetBackgroundColour("#aafafa")
         
-        # Centrando y mostrando la ventana
+        # Center and show 
         self.Centre(True)
         self.Show()
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxFrame Demo")
+    frame = WXDemoFrame(None, u"wxFrame Demo")
     app.MainLoop()

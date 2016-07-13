@@ -8,22 +8,22 @@
 #
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(250,200))
         self.sz = wx.BoxSizer(wx.VERTICAL)
-        # Creando el listbox
-        lista = "Python|C|C++|Fortran|Java|Perl|JavaScript".split("|")
-        self.listbox = wx.ListBox(self, -1, choices=lista)
-        # Agregando listbox al sizer
+        # Creating listbox
+        lang_list = "Python|C|C++|Fortran|Java|Perl|JavaScript".split("|")
+        self.listbox = wx.ListBox(self, -1, choices=lang_list)
+        # Add listbox to sizer
         self.sz.Add(self.listbox, 1, wx.EXPAND|wx.ALL, 10)
-        # Configurar sizer
+        # Set sizer
         self.SetSizer(self.sz)
-        # Centrar y mostra el Frame
+        # Center and show
         self.Centre(True)
         self.Show()
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxListBox Demo")
+    frame = WXDemoFrame(None, u"wxListBox Demo")
     app.MainLoop()

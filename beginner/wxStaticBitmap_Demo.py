@@ -8,7 +8,7 @@
 #
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(350,250))
         self.sz = wx.BoxSizer(wx.VERTICAL)
@@ -24,5 +24,5 @@ class MiAplicacion(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxStaticBitmap Demo")
+    frame = WXDemoFrame(None, u"wxStaticBitmap Demo")
     app.MainLoop()

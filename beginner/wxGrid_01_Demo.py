@@ -10,15 +10,15 @@
 import wx
 import wx.grid as wxgrid
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(300,250))
         self.sz = wx.BoxSizer(wx.VERTICAL)
         
         self.grid = wxgrid.Grid(self)
-        # Creamos grilla de 10x2
+        # Creating 10x2 grid
         self.grid.CreateGrid(10,2)
-        # Asignamos valores a las celdas
+        # Assign values to cells
         for i in range(10):
             for j in range(2):
                 val = "(%s,%s)"%(i,j)
@@ -31,5 +31,5 @@ class MiAplicacion(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"Simple Grid Demo")
+    frame = WXDemoFrame(None, u"Simple Grid Demo")
     app.MainLoop()

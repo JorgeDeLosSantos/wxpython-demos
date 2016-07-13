@@ -8,7 +8,7 @@
 #
 import wx
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(200,150))
         self.sz = wx.BoxSizer(wx.VERTICAL)
@@ -36,5 +36,5 @@ class MiAplicacion(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxSpinCtrl Demo")
+    frame = WXDemoFrame(None, u"wxSpinCtrl Demo")
     app.MainLoop()

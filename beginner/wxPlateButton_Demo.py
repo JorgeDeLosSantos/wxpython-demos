@@ -10,7 +10,7 @@
 import wx
 import wx.lib.platebtn as pbtn
 
-class MiAplicacion(wx.Frame):
+class WXDemoFrame(wx.Frame):
     def __init__(self,parent,title):
         wx.Frame.__init__(self,parent,title=title,size=(250,200))
         self.sz = wx.BoxSizer(wx.VERTICAL)
@@ -26,5 +26,5 @@ class MiAplicacion(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
-    frame = MiAplicacion(None, u"wxButton Demo")
+    frame = WXDemoFrame(None, u"wxButton Demo")
     app.MainLoop()
