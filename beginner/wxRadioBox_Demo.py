@@ -28,7 +28,8 @@ class WXDemoFrame(wx.Frame):
         self.Centre(True)
         self.Show()
         
-    def OnSelect(self,event):pass
+    def OnSelect(self,event):
+        pass
 
 if __name__=='__main__':
     app = wx.App()
