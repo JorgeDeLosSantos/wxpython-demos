@@ -179,7 +179,6 @@ class DataGrid(wxgrid.Grid):
         else:
             return False
 
-
 if __name__=='__main__':
     app = wx.App()
     frame = wx.Frame(None, -1, u"Simple Grid Demo", size=(300,200))

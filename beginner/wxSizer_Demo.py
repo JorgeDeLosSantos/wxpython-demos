@@ -19,7 +19,11 @@ class WXDemoFrame(wx.Frame):
         # Sizers
         self.szmain = wx.BoxSizer(wx.VERTICAL)
         self.szp1 = wx.BoxSizer(wx.HORIZONTAL)
+<<<<<<< HEAD
         self.szp2 = wx.GridSizer(3,3,1) # rows,cols,gap
+=======
+        self.szp2 = wx.GridSizer(rows=3, cols=3)
+>>>>>>> 6e07674da8fc5112dde766bedceca4ad1122014a
         
         # Controls for panel 1
         self.bt1 = wx.Button(self.p1, -1, u"Button 1")
@@ -50,5 +54,9 @@ class WXDemoFrame(wx.Frame):
 
 if __name__=='__main__':
     app = wx.App()
+<<<<<<< HEAD
     frame = WXDemoFrame(None, "Sizers Demo")
+=======
+    frame = WXDemoFrame(None, u"Sizers Demo")
+>>>>>>> 6e07674da8fc5112dde766bedceca4ad1122014a
     app.MainLoop()

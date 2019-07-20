@@ -14,10 +14,10 @@ class Calculator(wx.Frame):
         self.panel_keyboard = wx.Panel(self, -1)
         
         # Sizers
-        self.mainsz=wx.FlexGridSizer(rows=3, cols=1) # Main sizer
-        self.screensz=wx.FlexGridSizer(rows=1, cols=1) 
+        self.mainsz=wx.FlexGridSizer(1,3,1) # Main sizer
+        self.screensz=wx.FlexGridSizer(1,1,1) 
         self.onoffsz=wx.BoxSizer(wx.HORIZONTAL)
-        self.keyboardsz=wx.FlexGridSizer(rows=4, cols=4)
+        self.keyboardsz=wx.FlexGridSizer(4,4,1)
         
         # Creating components
         self.initScreen()
@@ -44,7 +44,7 @@ class Calculator(wx.Frame):
         Create screen
         """
         self.screen=wx.TextCtrl(self.panel_screen, -1, u"")
-        self.screen.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.BOLD, face="Courier New"))
+        # ~ self.screen.SetFont(wx.Font(16, wx.MODERN, wx.NORMAL, wx.BOLD, face="Courier New"))
         self.screensz.Add(self.screen, 1, wx.EXPAND|wx.ALL, 2)
         self.screensz.AddGrowableCol(0)
         

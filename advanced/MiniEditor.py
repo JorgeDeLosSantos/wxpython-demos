@@ -186,7 +186,7 @@ class MiniEditor(wx.Frame):
         info.SetWebSite("numython.github.io", "Numython")
         info.SetCopyright('(c) 2019')
         wxadv.AboutBox(info)
-
+        
 
 if __name__=='__main__':
     app=wx.App()
